@@ -1,0 +1,7 @@
+      <Button bgColor='tomato' style={{ width: '45%'}} color='pink'>gmsj</Button>
+
+      <Text>Hello !!!</Text>
+      <Button onButtonClicked={ arg => {
+        ToastAndroid.show('button clicked depuis App', ToastAndroid.LONG)
+      }}
+      bgColor='green'>gmsgj</Button>

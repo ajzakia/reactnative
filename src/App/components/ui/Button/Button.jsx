@@ -11,10 +11,19 @@ const Button = props => {
         props.onButtonClicked();
         console.log('button clicked');
       }}>
-      <View style={[styles.vue, props.style, {backgroundColor: props.bgColor}]}>
-        <Text style={[styles.texte, {color: props.color}]}>
-          {props.children}
-        </Text>
+      <View
+        style={[
+          styles.buttonView,
+          props.style,
+          {backgroundColor: props.bgColor},
+        ]}>
+        {typeof props.children === 'string' ? (
+          <Text style={[styles.buttonText, {color: props.color}]}>
+            {props.children}
+          </Text>
+        ) : (
+          props.children
+        )}
       </View>
     </TouchableOpacity>
   );
@@ -24,7 +33,7 @@ Button.propTypes = {
   style: propTypes.object,
   children: propTypes.string.isRequired,
   bgColor: propTypes.string,
- // onButtonClicked: propTypes.func.isRequired,
+  // onButtonClicked: propTypes.func.isRequired,
 };
 Button.defaultProps = {
   bgColor: 'skyblue',

@@ -1,13 +1,13 @@
 import {StyleSheet} from 'react-native'
 
-const styles = StyleSheet.create({
-    buttonView: {
+const buttonImg = StyleSheet.create({
+    vue: {
       padding: 10,
       backgroundColor: 'skyblue',
       alignItems: 'center',
       margin: 3,
     },
-    buttonText: {
+    texte: {
       fontWeight: 'bold',
       fontSize: 25,
       color: 'white',
@@ -15,11 +15,14 @@ const styles = StyleSheet.create({
       textDecorationStyle: 'white',
       textDecorationLine: 'underline',
     },
-    buttonImage: {
-        fontWeight: '900',
-        width : 50,
-        height: 50
-    },
+    img: {
+      padding: 10,
+      backgroundColor: 'skyblue',
+      alignItems: 'center',
+      margin: 3,
+      width: 10,
+      height: 10,
+    }
   });
 
-export default styles;
+export default buttonImg;
