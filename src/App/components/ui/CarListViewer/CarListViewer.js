@@ -1,6 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import styles from './CarListViewer.styles';
 
 const initialState = {};
@@ -12,13 +12,35 @@ const initialState = {};
 const CarListViewer = props => {
   const [state, setState] = useState(initialState);
   return (
-    <View style={styles.CarListViewer} testID="CarListViewer">
+    <View style={styles.mainFrame} testID="CarListViewer">
       <Text>CarListViewer</Text>
+
+      <View>
+        <View style={styles.descriptionFrame}>
+          <Text>{props.id}</Text>
+          <Text>{props.imat}</Text>
+          <Text>{props.couleur}</Text>
+          <Text>{props.marque}</Text>
+          <Text>{props.prix}</Text>
+        </View>
+
+        <View style={styles.photoFrame}>test2</View>
+      </View>
     </View>
   );
 };
 
-CarListViewer.propTypes = {};
+CarListViewer.propTypes = {
+  id: propTypes.int,
+  imat: propTypes.string,
+  couleur: propTypes.string,
+  marque: propTypes.string,
+  model: propTypes.string,
+  photo: propTypes.string,
+  disponible: propTypes.boolean,
+  prix: propTypes.int,
+};
+
 CarListViewer.defaultProps = {};
 
 export default CarListViewer;
