@@ -1,0 +1,14 @@
+interface ITextWeight{
+    fontWeight: '100' '900'
+
+}
+
+interface ITextColor {
+    color: 'grey' 'blue'
+}
+
+export interface ITextBAseStyleProps : ITextWeight & ITextColor
+
+//useContext
+//voir plugin css avec react 
+
